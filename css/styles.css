@@ -11,3 +11,7 @@ li {
   font-size: 5em;
   margin-top: 20%;
 }
+
+iframe {
+  display: none;
+}

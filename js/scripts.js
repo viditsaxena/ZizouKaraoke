@@ -8,7 +8,8 @@ $(document).ready(function() {
   setTimeout(renderChorusLyrics, 121500);
   setTimeout(renderCoreLyrics, 149500);
   setTimeout(renderChorusLyrics, 188000);
-  setTimeout(renderVerse3Lyrics, 221000);
+  setTimeout(renderVerse3Lyrics, 220000);
+  setTimeout(renderEnd, 257500);
 });
 
 
@@ -69,8 +70,9 @@ var songVerse3 = ['Canavarro, Karagounis, Chicharito, William Gallas',
 'ZIZOU',
 'Zinedine Zidane',
 'Zinedine Zidane',
-'He is a part of things, he is a part of things',
-'Song By Vaudeville Smash - Zinedine Zidane (Feat. Les Murray)'];
+'He is a part of things, he is a part of things'];
+
+var songEnd = 'Song By Vaudeville Smash - Zinedine Zidane (Feat. Les Murray)';
 
 // function renderLyricsAgain() {
 //   var i = 0;
@@ -178,4 +180,10 @@ function renderChorusLyrics() {
       i++;
     }
   }
+};
+
+function renderEnd() {
+
+  $('li').text(songEnd).hide().show(500);
+
 };

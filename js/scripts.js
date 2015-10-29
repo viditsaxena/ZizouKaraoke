@@ -10,6 +10,7 @@ $(document).ready(function() {
   setTimeout(renderChorusLyrics, 188000);
   setTimeout(renderVerse3Lyrics, 220000);
   setTimeout(renderEnd, 257500);
+  setTimeout(setInterval( changeBackground, 100 ), 10000);
 });
 
 
@@ -185,5 +186,18 @@ function renderChorusLyrics() {
 function renderEnd() {
 
   $('li').text(songEnd).hide().show(500);
+
+};
+
+
+function changeBackground(){
+
+
+
+var colors = ['indianred', 'green', 'coral', 'slateblue', 'darkturquoise', 'darkmagenta', 'lightblue', 'slategrey', 'lightsalmon'];
+
+var colorChoice = colors[ Math.floor( Math.random() * colors.length ) ];
+
+$('body').css('background-color', colorChoice);
 
 };

@@ -4,9 +4,10 @@ $(document).ready(function() {
   renderIntroLyrics();
   setTimeout(renderVerse1Lyrics, 31000);
   setTimeout(renderChorusLyrics, 59500);
-  setTimeout(renderVerse2Lyrics, 92700);
-  setTimeout(renderChorusLyrics, 121000);
-  setTimeout(renderCoreLyrics, 152000);
+  setTimeout(renderVerse2Lyrics, 92900);
+  setTimeout(renderChorusLyrics, 121500);
+  setTimeout(renderCoreLyrics, 149500);
+  setTimeout(renderChorusLyrics, 188000);
 });
 
 
@@ -15,9 +16,9 @@ var songIntro = ['In 1972, under a scorching June Sun',
 'Two Algerian immigrants awaited the birth of their 5th child',
 'Later that day, a star was born']
 
-var songVerse1 = ['Christiano Ronaldo',
+var songVerse1 = ['Cristiano Ronaldo',
 'Wayne Rooney, Veron',
-'Suaraz, Van Basten',
+'Suarez, Van Basten',
 'Gianluigi Buffon',
 'Xavi, Iniesta',
 'Drogba, Hazard',
@@ -57,11 +58,8 @@ var songVerse2 = ['Lionel Messi',
 
 var songCore = ['And he’ll burn through the dark like a fire (Puskas, Eusebio)',
 'So much more than the world was dreaming of wa ya ya (Beckenbauer, Platini, Best)',
-'He’ll fight (Charlton)',
-'And his light (Cruyff)',
-'will shine on and on and on (Baggio)',
-'Oh, why (Diego Armando Maradona)',
-'With his will to survive (Pele)']
+'He’ll fight (Charlton) And his light (Cruyff) will shine on and on and on (Baggio)',
+'Oh, why (Diego Armando Maradona) with his will to survive (Pele)']
 
 var songVerse3 = ['Canavarro, Karagounis, Chicharito, William Gallas',
 'Sanchez, Mark Bosnic, Hulk, Alexi Lalas',
@@ -70,7 +68,8 @@ var songVerse3 = ['Canavarro, Karagounis, Chicharito, William Gallas',
 'Park Ji Sung, Donovan, Eto, Zizou',
 'ZIZOU',
 'Zinedine Zidane, Zinedine Zidane',
-'He is a part of things, he is a part of things'];
+'He is a part of things, he is a part of things',
+'Song By Vaudeville Smash - Zinedine Zidane (Feat. Les Murray)'];
 
 // function renderLyricsAgain() {
 //   var i = 0;
@@ -136,13 +135,13 @@ function playVerse(){
 function renderCoreLyrics() {
   var i = 0;
   // $('.song').append('<li>');
-  var intervalId = setInterval(playCore, 6000);
+  var intervalId = setInterval(playCore, 7500);
 
   function playCore(){
     if (i === songCore.length) {
       clearInterval(intervalId);
     } else {
-      $('li').text(songCore[i]).hide().slideDown(1000);
+      $('li').text(songCore[i]).hide().slideDown(2000);
       $('li').addClass('line');
       i++;
     }

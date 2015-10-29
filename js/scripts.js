@@ -2,12 +2,13 @@ $(document).ready(function() {
   console.log("Loaded");
   $('.song').append('<li>');
   renderIntroLyrics();
-  setTimeout(renderVerse1Lyrics, 31000);
+  setTimeout(renderVerse1Lyrics, 31500);
   setTimeout(renderChorusLyrics, 59500);
-  setTimeout(renderVerse2Lyrics, 92900);
+  setTimeout(renderVerse2Lyrics, 93000);
   setTimeout(renderChorusLyrics, 121500);
   setTimeout(renderCoreLyrics, 149500);
   setTimeout(renderChorusLyrics, 188000);
+  setTimeout(renderVerse3Lyrics, 221000);
 });
 
 
@@ -64,10 +65,10 @@ var songCore = ['And he’ll burn through the dark like a fire (Puskas, Eusebio)
 var songVerse3 = ['Canavarro, Karagounis, Chicharito, William Gallas',
 'Sanchez, Mark Bosnic, Hulk, Alexi Lalas',
 'Wilkshere, Honda, Busquets, Dickie, Simao',
-'Thierry Henry, Modric, Vidal',
-'Park Ji Sung, Donovan, Eto, Zizou',
+'Thierry Henry, Modric, Vidal, Park Ji Sung, Donovan, Eto, Zizou',
 'ZIZOU',
-'Zinedine Zidane, Zinedine Zidane',
+'Zinedine Zidane',
+'Zinedine Zidane',
 'He is a part of things, he is a part of things',
 'Song By Vaudeville Smash - Zinedine Zidane (Feat. Les Murray)'];
 
@@ -104,7 +105,7 @@ function renderIntroLyrics() {
   function renderVerse1Lyrics() {
     var i = 0;
     // $('.song').append('<li>');
-    var intervalId = setInterval(playVerse, 2000);
+    var intervalId = setInterval(playVerse, 1900);
 
   function playVerse(){
     if (i === songVerse1.length) {
@@ -120,13 +121,28 @@ function renderIntroLyrics() {
 function renderVerse2Lyrics() {
   var i = 0;
   // $('.song').append('<li>');
-  var intervalId = setInterval(playVerse, 2000);
+  var intervalId = setInterval(playVerse, 1950);
 
 function playVerse(){
   if (i === songVerse2.length) {
     clearInterval(intervalId);
   } else {
     $('li').text(songVerse2[i]).hide().slideDown(800);
+    $('li').addClass('line');
+    i++;
+  }
+}
+};
+function renderVerse3Lyrics() {
+  var i = 0;
+  // $('.song').append('<li>');
+  var intervalId = setInterval(playVerse, 3600);
+
+function playVerse(){
+  if (i === songVerse3.length) {
+    clearInterval(intervalId);
+  } else {
+    $('li').text(songVerse3[i]).hide().slideDown(1000);
     $('li').addClass('line');
     i++;
   }
